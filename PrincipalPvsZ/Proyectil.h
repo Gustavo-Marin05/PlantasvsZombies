@@ -1,15 +1,19 @@
 #pragma once
-#include "Actor.h"
-class Proyectil: public Actor
+
+class Proyectil
 {
 private:
 	
+	int posicionx;
+	
+	int alto;
+	int ancho;
 	int velocidad;
 
 public:
 	int nivelDano;
 
-	Proyectil(int x,int y, int al, int an, int vel, int d);
+	Proyectil(int x, int al, int an, int vel, int d);
 
 
 
@@ -17,12 +21,17 @@ public:
 
 	
 	int getVelocidad();
+	int getPosicionx();
+	int getAlto();
+	int getAncho();
 	
 	
 	
 	//funciones
 	int mover();
-	void dibujar(char tipoProyectil);
+	
 
+
+	
 };
 

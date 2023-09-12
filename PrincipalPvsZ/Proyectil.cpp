@@ -2,9 +2,11 @@
 #include <iostream>
 using namespace std;
 
-Proyectil::Proyectil(int x, int y,int al, int an, int vel, int d):Actor(x,y,al,an)
+Proyectil::Proyectil(int x,int al, int an, int vel, int d)
 {
-	
+	posicionx = x;
+	alto = al;
+	ancho = an;
 	velocidad = vel;
 	nivelDano = d;
 
@@ -22,6 +24,20 @@ int Proyectil::getVelocidad()
 {
 	return velocidad;
 }
+int Proyectil::getPosicionx()
+{
+	return posicionx;
+}
+
+int Proyectil::getAlto()
+{
+	return alto;
+}
+
+int Proyectil::getAncho()
+{
+	return ancho;
+}
 
 
 
@@ -36,25 +52,7 @@ int Proyectil::mover()
 	return posix = posix + velocidad;
 }
 
-void Proyectil::dibujar(char tipoProyectil)
-{
-	
-	if (tipoProyectil == 'h') {
-		cout << "  * ********  " << endl;
-		cout << "   * ********" << endl;
-		cout << "    * ******** " << endl;
-		cout << "     * ********" << endl;
-		
-	}
-	else if (tipoProyectil =='g') {
-		cout << "       *****" << endl;
-		cout << "     ***********" << endl;
-		cout << "    *************" << endl;
-		cout << "    *************" << endl;
-		cout << "     ***********" << endl;
-		cout << "        *****" << endl;
-	}
 
 
 
-}
+

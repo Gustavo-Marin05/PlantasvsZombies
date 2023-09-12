@@ -1,11 +1,14 @@
 #pragma once
 #include <iostream>
-#include "Actor.h"
+
 using namespace std;
-class Zombi :public Actor 
+class Zombi 
 {
 private:
-	
+	int posicionx;
+	int posiciony;
+	int alto;
+	int ancho;
 	int nivelVida;
 	int velocidad;
 	
@@ -13,11 +16,15 @@ private:
 public:
 	int valorDanio;
 
+	Zombi(int x, int y, int velo);
 	
-	Zombi(int , int , int , int , int);
+	Zombi(int x, int y, int al, int an, int velo);
 
 
-	
+	int getPosicionx();
+	int getPosiciony();
+	int getAlto();
+	int getAncho();
 	int getVelocidad();
 	int avanzar(char direccion);
 	void Atacar();

@@ -1,14 +1,40 @@
 #include "Planta.h"
 #include <iostream>
 using namespace std;
-Planta::Planta(int x, int y, int al, int an,int danio):Actor(x,y,al,an)
+Planta::Planta(int x, int y, int al, int an,int danio)
 {
+	posicionx = x;
+	posiciony = y;
+	alto = al;
+	ancho = an;
 	valorDano = danio;
 }
 
 
 
 //estos  son los geters
+
+
+int Planta::getPosicionx()
+{
+	return posicionx;
+}
+
+int Planta::getPosiciony()
+{
+	return posiciony;
+}
+
+int Planta::getAlto()
+{
+	return alto;
+}
+
+int Planta::getAncho()
+{
+	return ancho;
+}
+
 
 
 int Planta::getVelocidadDisparo()
@@ -28,8 +54,7 @@ int Planta::getValorDaño()
 
 int Planta::crecer(char tipo, float dim)
 {
-	int alto=getAlto();
-	int ancho=getAncho();
+	
 	if (tipo == 'g') {
 		return alto = ancho = 3;
 	}
@@ -47,38 +72,5 @@ int Planta::crecer(char tipo, float dim)
 
 }
 
-void Planta::dibujar(char tipoPlanta)
-{
-
-	if (tipoPlanta == 'g') {
-		cout << "         **" << endl;
-		cout << "       *******   **" << endl;
-		cout << "      *************" << endl;
-		cout << "      *************" << endl;
-		cout << "       *******   **" << endl;
-		cout << "          *" << endl;
-		cout << "          *" << endl;
-		cout << "   *  *   *  *  *" << endl;
-		cout << "      * **** *" << endl;
-		
-
-	}
-	else if (tipoPlanta == 'G') {
-		cout << "      " << endl;
-		cout << "        *  *  * " << endl;
-		cout << "      *  *****  *" << endl;
-		cout << "      *  *****  *" << endl;
-		cout << "      *  *****  *" << endl;
-		cout << "        *  *  *" << endl;
-		cout << "           *" << endl;
-		cout << "           * " << endl;
-		cout << "     * *   *   * *" << endl;
-		cout << "       *  ***  *" << endl;
-		cout << "" << endl;
-		cout << "" << endl;
-		cout << "" << endl;
-		cout << "" << endl;
-	}
-}
 
 
