@@ -10,6 +10,7 @@ public:
 	int nivelDano;
 
 	Proyectil(int x,int y, int al, int an, int vel, int d);
+	Proyectil(int d);
 
 
 
@@ -23,6 +24,13 @@ public:
 	//funciones
 	int mover();
 	void dibujar(char tipoProyectil);
+
+
+	//crear un funcion que se llame destrozar
+	//no hay nescecidad de de que se destruya a nivel codigo solo que se muestre nada mas
+
+
+
 
 };
 

@@ -12,6 +12,10 @@ Proyectil::Proyectil(int x, int y,int al, int an, int vel, int d):Actor(x,y,al,a
 }
 
 
+Proyectil::Proyectil(int d) {
+	nivelDano = d;
+}
+
 //desde aqui empiezan los geters
 
 

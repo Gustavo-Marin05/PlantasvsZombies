@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Actor.h"
+#include "Proyectil.h"
 using namespace std;
 class Zombi :public Actor 
 {
@@ -23,5 +24,9 @@ public:
 	void Atacar();
 	void ChocarProyectil();
 	void dibujar(char tipoZombi);
+	void Colicionar(Proyectil *p1);
+
+
+
 };
 

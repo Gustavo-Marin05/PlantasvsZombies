@@ -6,6 +6,10 @@ Planta::Planta(int x, int y, int al, int an,int danio):Actor(x,y,al,an)
 	valorDano = danio;
 }
 
+Planta::Planta()
+{
+}
+
 
 
 //estos  son los geters
@@ -31,18 +35,20 @@ int Planta::crecer(char tipo, float dim)
 	int alto=getAlto();
 	int ancho=getAncho();
 	if (tipo == 'g') {
-		return alto = ancho = 3;
+		alto = ancho = 3;
 	}
 	else if (tipo == 'c') {
-		return alto = ancho = 5;
+		 alto = ancho = 5;
 	}
 	else if (tipo == 'n')
 	{
-		return alto = ancho = 2;
+		 alto = ancho = 2;
 	}
 	else if (tipo == 'gi') {
-		return alto = ancho = 1;
+		 alto = ancho = 1;
 	}
+	setAlto(alto);
+	setAncho(ancho);
 	
 
 }
@@ -79,6 +85,46 @@ void Planta::dibujar(char tipoPlanta)
 		cout << "" << endl;
 		cout << "" << endl;
 	}
+}
+
+
+//aqui estaremos utilizando el tipo de planta que veremos en el enum
+
+Proyectil* Planta::disparar()
+{
+	Proyectil *p1=nullptr;
+	switch (tipo)
+	{
+	case guisante:
+		//cada tipo de planta tendra un valor de dato
+        //de daño
+		//5
+
+		p1 = new Proyectil(10);
+
+		break;
+	case Carnivora:
+		//10
+
+		p1 = new Proyectil(5);
+
+		break;
+	case kactus:
+		//3
+		p1 = new Proyectil(3);
+
+
+		break;
+	default:
+		break;
+	}
+
+	p1->mover();
+	return p1;
+}
+
+Planta::~Planta()
+{
 }
 
 

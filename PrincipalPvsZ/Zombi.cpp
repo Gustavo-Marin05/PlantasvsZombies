@@ -40,19 +40,25 @@ int Zombi::avanzar(char direccion) {
 
 	if (direccion == 'n' || direccion == 'N') {
 		 
-		return posiy+1;
+		 posiy++;
+		
 	}
 	else if (direccion == 's' || direccion == 'S') {
-		return posiy=posiy -1;
+		 posiy--;
 	}
 	else if (direccion == 'e' || direccion == 'E') {
-		return posix=posix - 1;
+		 posix --;
 
 	}
 	else if (direccion == 'o' || direccion == 'O') {
-		return posix=posix+ 1;
+		posix++;
 	}
 
+	setPosiciony(posiy);
+	setPosicionx(posix);
+
+	return posix, posiy;
+	
 }
 
 void Zombi::dibujar(char tipoZombi)
@@ -91,6 +97,48 @@ void Zombi::dibujar(char tipoZombi)
 		cout << "     *" << endl;
 		cout << "    *** " << endl;
 	}
+
+}
+
+
+
+//en esta clase vamos a implementar estas funciones 
+
+
+
+void Zombi::Colicionar(Proyectil *p1)
+{
+	//quitar al nivel de vida el zombi el nivel de daño que tien el proyectil
+	
+	
+	
+	
+	
+	
+	
+	//detener el proyectil 
+
+
+
+	// al ultimo revisar si el zombi esta muerto
+	//eso ver en el principal
+	// Planta p1;
+	//Zombie z1;
+	//Proyectil *por1=p1.disparar();
+	//z1.colicionar(pro1)
+
+	//o tambien esto z1.colicionar(p1.disparar());  esta es la manera mas directa
+
+	//considerar un constructor que permita considerar el tipo de planta
+	//considerar que la planta va a colicionar con el zombi
+
+
+
+
+
+
+	//mostar el nivel de vida
+
 
 }
 
